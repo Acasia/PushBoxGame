@@ -1,0 +1,10 @@
+all:pushBox
+
+pushBox:Game.o main.o
+	g++ -W -Wall -g -o pushBox Game.o main.o -lncursesw
+
+Game.o:Game.cpp
+	g++ -W -Wall -c -o Game.o -fPIC Game.cpp
+
+main.o:main.cpp
+	g++ -W -Wall -c -o main.o main.cpp
